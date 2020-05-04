@@ -1,0 +1,46 @@
+								*******Jenkins*******
+
+* Installation - 
+	1.jenkins.io (official site)---->download---->lts---->windows.
+	2.By pulling image from docker.
+	3.jenkins.io (official site)---->download---->lts---->java.warfile.
+
+* To change the port number - 
+	C:\Program Files (x86)\Jenkins[edit in the xml file].
+
+* As jenkins code is written in java so it can be run anywhere i.e portable.
+
+* In jenkins home-page new item is equivalent to create a new job.
+
+* Pre-requisite tools to be are GIT,MAVEN,JAVA  within manage jenkins---->global tool configuration.
+
+* Plugins are heart of jenkins.
+
+* People - grant some access to others.
+
+* Build history - to see any job's build history.
+
+* Credentials - to connect to some other container like tomcat or docker.
+
+* Before we used to run the code after deployment and if some change occurs then again have to repeat the whole process,
+  jenkins provides a better options i.e automates it.
+
+* Basic hello-world program - 
+	1.Create a new job say hello-world,
+	then choose the type of project here we have taken freestyle.
+	2.Now build the project --->add build step--->execute windows batch command,
+	and the commands are as - 
+	E:---->cd jenkins---->javac Test.java----->java Test    apply and save it.
+	3.Build now and then console output.
+
+* #1,#2,#3 represents the build number i.e number of builds.
+
+* For better UI experience blueocean is used.
+
+* Exceptions we get here are known as hudson exception like aborting build and will be marked fail.
+
+* For project containing jar files -
+	1.new file---->name of the job---->SCM------>git----->copyURL----->(SCM credentials).
+	2.Build---->addbuildstep---->top level mvn target---->goals( clean install)---->pom(project/pom.xml)  & save.
+
+* Workspaces are used to see the summary.
